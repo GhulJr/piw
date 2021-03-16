@@ -1,0 +1,62 @@
+<link href="https://fonts.googleapis.com/css?family=Ranchers" rel="stylesheet" type="text/css">
+<style>
+  .red-text {
+    color: blue;
+  }
+
+  h2 {
+    font-family: Ranchers, sans-serif;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: sans-serif;
+  }
+
+  .thick-green-border {
+    border-color: rgb(25, 11, 123);
+    border-width: 11px;
+    border-style: dotted;
+    border-radius: 12%;
+  }
+
+  .smaller-image {
+    width: 200px;
+  }
+
+  .silver-background {
+    background-color: #ABC;
+  }
+</style>
+
+<h2 class="red-text">DogPhotoApp</h2>
+<main>
+  <p class="red-text">Click here to view more <a href="https://pets.webmd.com/dogs/features/dog-cool-summer#1" target="_blank">dogs</a>.</p>
+
+  <a href="https://www.guidedogs.org/wp-content/uploads/2019/11/website-donate-mobile.jpg"><img class="smaller-image thick-green-border" src="https://www.guidedogs.org/wp-content/uploads/2019/11/website-donate-mobile.jpg" alt="OMG, labbo-puppy!"></a>
+
+  <div class="silver-background">
+    <p>Things dogs love:</p>
+    <ul>
+      <li>belly rubs</li>
+      <li>food</li>
+      <li>walk</li>
+    </ul>
+    <p>Top 3 things dogs hate:</p>
+    <ol>
+      <li>wets</li>
+      <li>vacuum cleaners</li>
+      <li>cats</li>
+    </ol>
+  </div>
+
+  <form action="https://www.unilad.co.uk/animals/meet-balltze-the-original-cheems-dog-and-star-of-your-favourite-memes/" id="dog-photo-form">
+    <label><input type="radio" name="indoor-outdoor" checked> Outdoor</label>
+    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+    <label><input type="checkbox" name="personality" checked> Loving</label>
+    <label><input type="checkbox" name="personality"> Energetic</label>
+    <label><input type="checkbox" name="personality"> Loving-Energetic</label><br>
+    <input type="text" placeholder="dog photo URL" required>
+    <button type="submit">Submit</button>
+  </form>
+</main>
