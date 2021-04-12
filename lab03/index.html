@@ -42,10 +42,47 @@
             margin-left: auto;
             text-decoration: none;
         }
+
+        .modal-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #66666666;
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            z-index: 1000;
+        }
+
+        .modal-delete-item {
+            width: 100%;
+            height: 100%;
+            max-width: 300px;
+            max-height: 150px;
+            background-color: white;
+            border-radius: 6px;
+            border: 1px solid grey;
+        }
+
+        .hidden {
+            display: none;
+        }
+
     </style>
 </head>
 
-<main>
+<body>
+    <div id="modal-delete-item-container" class="modal-container hidden">
+        <div class="modal-delete-item">
+            <h2>Are you sure?</h2>
+            Clicked element would be deleted. Proceed?
+            <div>
+                <button id="modal-decline-delete-button">No</button>
+                <button id="modal-confirm-delete-button">Yes</button>
+            </div>
+        </div>
+
+    </div>
     <div class="create-item">
         <label class="create-item-label">Task to do:</label>
         <input type="text" id="create-item-input" placeholder="Title..." />
@@ -55,6 +92,6 @@
     <ul id="todo-list">
 
     </ul>
-</main>
+</body>
 
 </html>

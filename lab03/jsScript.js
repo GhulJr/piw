@@ -6,8 +6,15 @@ const Z_KEY_CODE = 90;
 const TODO_TITLE_CLASS = "todo-title-class";
 const FINISH_DATE_CLASS = "finish-date-class";
 
+const MODAL_CONTAINER_ID = "modal-delete-item-container";
+const MODAL_DECLINE_DELETE_BUTTON_ID = "modal-decline-delete-button";
+const MODAL_CONFIRM_DELETE_BUTTON_ID = "modal-confirm-delete-button";
+const TODO_LIST_ID = "todo-list";
+const CREATE_ITEM_INPUT_ID = "create-item-input";
+
 let keyGenerator = 0;
 let lastRemovedElement = null;
+let elementToRemove = null;
 let ctrlClicked = false;
 
 /* jQuery */
@@ -17,12 +24,24 @@ $(document).ready(() => {
         if(keyCode === CTRL_KEY_CODE) {
             ctrlClicked = true;
         } else if(keyCode === Z_KEY_CODE && ctrlClicked) {
-            lastRemovedElement.appendTo($("ul#todo-list"));
+            lastRemovedElement.appendTo($("ul#" + TODO_LIST_ID));
             addOnRemoveClicked(lastRemovedElement.find('button'), lastRemovedElement);
             ctrlClicked = false;
         } else {
             ctrlClicked = false;
         }
+    });
+
+    $("#" + MODAL_DECLINE_DELETE_BUTTON_ID).on('click', () => {
+        elementToRemove = null;
+        $("#" + MODAL_CONTAINER_ID).addClass('hidden');
+    });
+
+    $("#" + MODAL_CONFIRM_DELETE_BUTTON_ID).on('click', () => {
+        lastRemovedElement = elementToRemove;
+        elementToRemove.remove();  
+        elementToRemove = null;    
+        $("#" + MODAL_CONTAINER_ID).addClass('hidden');
     });
 });
 
@@ -36,8 +55,8 @@ const addRemoveItemButton = (listItem) => {
 const addOnRemoveClicked = (removeButton, listItem) => {
     $(removeButton).on('click', (event) => {
         event.stopPropagation();
-        lastRemovedElement = $(listItem);
-        $(listItem).remove();
+        elementToRemove = $(listItem);
+        $("#" + MODAL_CONTAINER_ID).removeClass('hidden');
     });
 }
 
@@ -59,12 +78,12 @@ const listItemClickHandler = (listItem) => {
 }
 
 const addItem = () => {
-    let createItemInputValue = document.getElementById("create-item-input").value;
+    let createItemInputValue = document.getElementById(CREATE_ITEM_INPUT_ID).value;
 
     if (createItemInputValue == null || createItemInputValue.trim() === "") {
         alert("Item name must not be blank!");
     } else {
-        let todoList = document.getElementById("todo-list");
+        let todoList = document.getElementById(TODO_LIST_ID);
 
         let listItem = document.createElement("li");
         let taskTitle = document.createElement('div');
@@ -73,7 +92,7 @@ const addItem = () => {
         taskTitle.classList.add(TODO_TITLE_CLASS);
         finishDate.classList.add(FINISH_DATE_CLASS);
 
-        taskTitle.textContent = document.getElementById("create-item-input").value;
+        taskTitle.textContent = createItemInputValue;
         finishDate.classList.add('date');
 
         listItem.id = keyGenerator++;
