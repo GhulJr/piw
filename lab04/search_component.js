@@ -1,0 +1,39 @@
+'use strict';
+
+/* const e = React.createElement;
+
+class LikeButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { liked: false };
+  }
+
+  render() {
+    if (this.state.liked) {
+      return 'You liked this.';
+    }
+
+    // Display a "Like" <button>
+    return e(
+      'button',
+      { onClick: () => this.setState({ liked: true }) },
+      'Like'
+    );
+  }
+}
+
+const domContainer = document.getElementById('#like_button_container');
+ReactDOM.render(e(LikeButton), domContainer);
+ */
+
+class SearchComponent extends React.Component {
+
+  render() {
+      return <h1>Hello World</h1>
+  };
+}
+
+ReactDOM.render(
+  <SearchComponent/>,
+  document.getElementById('search-component-container')
+);
