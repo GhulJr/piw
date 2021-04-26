@@ -12,7 +12,104 @@
     <meta charset="UTF-8">
 
     <style>
+        body {
+            background: #f2f2f2;
+            font-family: 'Open Sans', sans-serif;
+            padding: 8px;
+        }
 
+        .input {
+            width: 100%;
+            position: relative;
+            display: flex;
+        }
+
+        .searchTerm {
+            width: 50%;
+            border: 3px solid #00B4CC;
+            border-right: none;
+            padding: 5px;
+            height: 36px;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            color: #9DBFAF;
+        }
+
+        .searchTerm:focus {
+            color: #00B4CC;
+        }
+
+        .inputData {
+            width: 80%;
+            border: 3px solid #00B4CC;
+            padding: 5px;
+            margin-top: 8px;
+            margin-left: 4px;
+            height: 36px;
+            border-radius: 5px 5px 5px 5px;
+            outline: none;
+            color: #9DBFAF;
+        }
+
+        .inputData:focus {
+            color: #00B4CC;
+        }
+
+        .searchButton {
+            width: 80px;
+            height: 36px;
+            border: 1px solid #00B4CC;
+            background: #00B4CC;
+            text-align: center;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .listItem {
+            width: 100%;
+            border: 3px solid #00B4CC;
+            padding: 5px;
+            margin-top: 4px;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            color: #00B4CC;
+        }
+
+        .bordered {
+            width: 70%;
+            border: 3px solid #00B4CC;
+            border-radius: 5px 5px 5px 5px;
+            outline: none;
+            margin-top: 8px;
+        }
+
+        h3 {
+            margin-left: 4px;
+            margin-top: 8px;
+            color: #00B4CC;
+        }
+
+        .label {
+            margin-left: 4px;
+            margin-top: 8px;
+            color: #00B4CC;
+        }
+
+        .error {
+            padding: 5px;
+            color: red;
+            transform: translateY(20%);
+        }
+
+        .addButton {
+            width: 100%;
+            color: #fff;
+            margin: 4px;
+            background-color: #00B4CC;
+        }
+        
     </style>
 </head>
 
@@ -46,9 +143,9 @@
         }
             
             render() {
-                return <div>
-                    <input type="text" value={this.state.searchQuery} onChange={this.handleChange} placeholder="Search..." />
-                    <button type="submit" onClick={this.handleSubmit}>Search</button>
+                return <div class="input">
+                    <input class="searchTerm" type="text" value={this.state.searchQuery} onChange={this.handleChange} placeholder="Search..." />
+                    <button class="searchButton" type="submit" onClick={this.handleSubmit}>Search</button>
                 </div>
             }
         }
@@ -132,21 +229,21 @@
             }
 
             render() {
-                return <div>
+                return <div class="bordered">
                     <div><h3>Add student</h3></div>
-                    <div>
-                        <input type="text" value={this.state.name} onChange={this.handleChangeName} placeholder="Name..."></input>
-                        { this.state.isNameInvalid ? <label>Description must not be empty!</label> : null }
+                    <div class="input">
+                        <input class="inputData" type="text" value={this.state.name} onChange={this.handleChangeName} placeholder="Name..."></input>
+                        { this.state.isNameInvalid ? <label class="error">Description must not be empty!</label> : null }
                     </div>
-                    <div>
-                        <input type="text" value={this.state.email} onChange={this.handleChangeEmail} placeholder="Email..."></input>
-                        { this.state.isEmailInvalid ? <label>Invalid email format!</label> : null }
+                    <div class="input">
+                        <input class="inputData" type="text" value={this.state.email} onChange={this.handleChangeEmail} placeholder="Email..."></input>
+                        { this.state.isEmailInvalid ? <label class="error">Invalid email format!</label> : null }
                     </div>
-                    <div>
-                        <input type="text" value={this.state.description} onChange={this.handleChangeDescription} placeholder="Description..."></input>
-                        { this.state.isDescriptionInvalid ? <label>Description must not be empty!</label> : null }
+                    <div class="input">
+                        <input class="inputData" type="text" value={this.state.description} onChange={this.handleChangeDescription} placeholder="Description..."></input>
+                        { this.state.isDescriptionInvalid ? <label class="error"l>Description must not be empty!</label> : null }
                     </div>
-                    <div><button type="submit" onClick={this.handleSubmit}>Add</button></div>
+                    <div><button class="addButton" type="submit" onClick={this.handleSubmit}>Add</button></div>
                 </div>
             }
         }
@@ -154,7 +251,7 @@
         const ListItem = (props) => {
 
             return <li>
-                <div>
+                <div class="listItem">
                     <div><label><b>Name:</b> {props.name}</label></div>
                     <div><label><b>Email:</b> {props.email}</label></div>
                     <div><label><b>Description:</b> {props.description}</label></div>
@@ -164,7 +261,7 @@
 
         const SearchResultsCount = (props) => {
 
-            return <div>
+            return <div class="label">
                 <label>Znaleziono: {props.counter}</label>
             </div>
         }
@@ -217,8 +314,8 @@
             return <div>
                 <div><SearchComponent searchStudent={this.searchStudent}/></div>
                 <div><AddStudent addStudent={this.addStudent}/></div>
-                <div>{ this.state.isSearching ? <SearchResultsCount counter={this.state.counter}/> : null }</div>
-                <div><ul>{listItems}</ul></div>
+                <div class="bordered">{ this.state.isSearching ? <SearchResultsCount counter={this.state.counter}/> : null }</div>
+                <div class="bordered"><ul>{listItems}</ul></div>
             </div>
         }
         }
