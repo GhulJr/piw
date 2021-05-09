@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/tinder-spa/static/css/main.dfe3471a.chunk.css",
-    "main.js": "/tinder-spa/static/js/main.f89fde27.chunk.js",
-    "main.js.map": "/tinder-spa/static/js/main.f89fde27.chunk.js.map",
-    "runtime-main.js": "/tinder-spa/static/js/runtime-main.df1d3995.js",
-    "runtime-main.js.map": "/tinder-spa/static/js/runtime-main.df1d3995.js.map",
-    "static/js/2.ad80a2ff.chunk.js": "/tinder-spa/static/js/2.ad80a2ff.chunk.js",
-    "static/js/2.ad80a2ff.chunk.js.map": "/tinder-spa/static/js/2.ad80a2ff.chunk.js.map",
-    "static/js/3.e1073cd2.chunk.js": "/tinder-spa/static/js/3.e1073cd2.chunk.js",
-    "static/js/3.e1073cd2.chunk.js.map": "/tinder-spa/static/js/3.e1073cd2.chunk.js.map",
-    "index.html": "/tinder-spa/index.html",
-    "static/css/main.dfe3471a.chunk.css.map": "/tinder-spa/static/css/main.dfe3471a.chunk.css.map",
-    "static/js/2.ad80a2ff.chunk.js.LICENSE.txt": "/tinder-spa/static/js/2.ad80a2ff.chunk.js.LICENSE.txt"
+    "main.css": "/lab05/tinder-spa/static/css/main.dfe3471a.chunk.css",
+    "main.js": "/lab05/tinder-spa/static/js/main.f89fde27.chunk.js",
+    "main.js.map": "/lab05/tinder-spa/static/js/main.f89fde27.chunk.js.map",
+    "runtime-main.js": "/lab05/tinder-spa/static/js/runtime-main.e3218212.js",
+    "runtime-main.js.map": "/lab05/tinder-spa/static/js/runtime-main.e3218212.js.map",
+    "static/js/2.ad80a2ff.chunk.js": "/lab05/tinder-spa/static/js/2.ad80a2ff.chunk.js",
+    "static/js/2.ad80a2ff.chunk.js.map": "/lab05/tinder-spa/static/js/2.ad80a2ff.chunk.js.map",
+    "static/js/3.e1073cd2.chunk.js": "/lab05/tinder-spa/static/js/3.e1073cd2.chunk.js",
+    "static/js/3.e1073cd2.chunk.js.map": "/lab05/tinder-spa/static/js/3.e1073cd2.chunk.js.map",
+    "index.html": "/lab05/tinder-spa/index.html",
+    "static/css/main.dfe3471a.chunk.css.map": "/lab05/tinder-spa/static/css/main.dfe3471a.chunk.css.map",
+    "static/js/2.ad80a2ff.chunk.js.LICENSE.txt": "/lab05/tinder-spa/static/js/2.ad80a2ff.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.df1d3995.js",
+    "static/js/runtime-main.e3218212.js",
     "static/js/2.ad80a2ff.chunk.js",
     "static/css/main.dfe3471a.chunk.css",
     "static/js/main.f89fde27.chunk.js"
