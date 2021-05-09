@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/piw/lab05/tinder-spa/static/css/main.dfe3471a.chunk.css",
-    "main.js": "/piw/lab05/tinder-spa/static/js/main.f89fde27.chunk.js",
-    "main.js.map": "/piw/lab05/tinder-spa/static/js/main.f89fde27.chunk.js.map",
-    "runtime-main.js": "/piw/lab05/tinder-spa/static/js/runtime-main.f92b271e.js",
-    "runtime-main.js.map": "/piw/lab05/tinder-spa/static/js/runtime-main.f92b271e.js.map",
-    "static/js/2.ad80a2ff.chunk.js": "/piw/lab05/tinder-spa/static/js/2.ad80a2ff.chunk.js",
-    "static/js/2.ad80a2ff.chunk.js.map": "/piw/lab05/tinder-spa/static/js/2.ad80a2ff.chunk.js.map",
-    "static/js/3.e1073cd2.chunk.js": "/piw/lab05/tinder-spa/static/js/3.e1073cd2.chunk.js",
-    "static/js/3.e1073cd2.chunk.js.map": "/piw/lab05/tinder-spa/static/js/3.e1073cd2.chunk.js.map",
-    "index.html": "/piw/lab05/tinder-spa/index.html",
-    "static/css/main.dfe3471a.chunk.css.map": "/piw/lab05/tinder-spa/static/css/main.dfe3471a.chunk.css.map",
-    "static/js/2.ad80a2ff.chunk.js.LICENSE.txt": "/piw/lab05/tinder-spa/static/js/2.ad80a2ff.chunk.js.LICENSE.txt"
+    "main.css": "/tinder-spa/static/css/main.dfe3471a.chunk.css",
+    "main.js": "/tinder-spa/static/js/main.f89fde27.chunk.js",
+    "main.js.map": "/tinder-spa/static/js/main.f89fde27.chunk.js.map",
+    "runtime-main.js": "/tinder-spa/static/js/runtime-main.df1d3995.js",
+    "runtime-main.js.map": "/tinder-spa/static/js/runtime-main.df1d3995.js.map",
+    "static/js/2.ad80a2ff.chunk.js": "/tinder-spa/static/js/2.ad80a2ff.chunk.js",
+    "static/js/2.ad80a2ff.chunk.js.map": "/tinder-spa/static/js/2.ad80a2ff.chunk.js.map",
+    "static/js/3.e1073cd2.chunk.js": "/tinder-spa/static/js/3.e1073cd2.chunk.js",
+    "static/js/3.e1073cd2.chunk.js.map": "/tinder-spa/static/js/3.e1073cd2.chunk.js.map",
+    "index.html": "/tinder-spa/index.html",
+    "static/css/main.dfe3471a.chunk.css.map": "/tinder-spa/static/css/main.dfe3471a.chunk.css.map",
+    "static/js/2.ad80a2ff.chunk.js.LICENSE.txt": "/tinder-spa/static/js/2.ad80a2ff.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.f92b271e.js",
+    "static/js/runtime-main.df1d3995.js",
     "static/js/2.ad80a2ff.chunk.js",
     "static/css/main.dfe3471a.chunk.css",
     "static/js/main.f89fde27.chunk.js"
