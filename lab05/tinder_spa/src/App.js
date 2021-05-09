@@ -1,11 +1,20 @@
 'use strict';
 
 import React from 'react';
+import {
+  Route,
+  HashRouter,
+  Link,
+  Switch,
+  NavLink
+} from "react-router-dom";
+
 import './App.css';
-import SearchComponent from './components/SearchComponent';
-import AddStudent from './components/AddStudent';
 import ListItem from './components/ListItem';
+import AddStudent from './components/AddStudent';
+import SearchComponent from './components/SearchComponent';
 import SearchResultsCount from './components/SearchResultsCount';
+
 
 class App extends React.Component {
 
@@ -52,12 +61,25 @@ class App extends React.Component {
       <ListItem name={props.name} email={props.email} description={props.description} />
     );
 
-    return <div>
-      <div><SearchComponent searchStudent={this.searchStudent} /></div>
-      <div><AddStudent addStudent={this.addStudent} /></div>
-      <div class="bordered">{this.state.isSearching ? <SearchResultsCount counter={this.state.counter} /> : null}</div>
-      <div class="bordered"><ul>{listItems}</ul></div>
-    </div>
+    return (
+      <HashRouter>
+        <div>
+          <ul>
+            <li><NavLink to="/search">Search</NavLink></li>
+            <li><NavLink to="/add-student">AddStudent</NavLink></li>
+          </ul>
+          <Switch>
+            <Route path="/search" component={() => <div>
+              <div><SearchComponent searchStudent={this.searchStudent} /></div>
+              <div class="bordered">{this.state.isSearching ? <SearchResultsCount counter={this.state.counter} /> : null}</div>
+              <div class="bordered"><ul>{listItems}</ul></div>
+            </div>} />
+            <Route path="/add-student" component={()=><AddStudent addStudent={this.addStudent}/>} />
+          </Switch>
+        </div>
+
+      </HashRouter>
+    );
   }
 }
 
